@@ -111,3 +111,25 @@ for (int i = 1; i <= nNn; i++)
 }
 
 Console.WriteLine(sum);
+
+// Дополнительное задание
+
+Console.WriteLine();
+
+Console.Write("enter кол-вл недель тренеровок: ");
+int nNnN = int.Parse(Console.ReadLine());
+bool isEnough = false;
+int trenDays = 0;
+
+for (int week = 1; week <= nNnN && !isEnough; week++) {
+    for (int day = 1; day <= 7; day++)
+    {
+        if (day == 7) continue;
+        trenDays++;
+        if (trenDays == 20)
+        {
+            Console.WriteLine($"неделя: {week}, день: {day}");
+            isEnough = true;
+        }
+    }
+}
